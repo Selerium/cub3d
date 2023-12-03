@@ -6,7 +6,7 @@
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:10:47 by jadithya          #+#    #+#             */
-/*   Updated: 2023/11/11 15:55:55 by jadithya         ###   ########.fr       */
+/*   Updated: 2023/12/03 17:28:55 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ bool	basic_parse(char *filepath, t_cub3d *cube)
 int	main(int argc, char **argv)
 {
 	t_cub3d	cube;
+	int		i;
 
 	if (argc != 2 && argv[0])
 	{
@@ -50,5 +51,8 @@ int	main(int argc, char **argv)
 		printf("Error: parsing file\n");
 		return (1);
 	}
+	i = 0;
+	while (cube.map.points[i])
+		printf("%s\n", cube.map.points[i++]);
 	return (0);
 }
